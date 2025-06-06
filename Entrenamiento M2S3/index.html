@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <div class="logo"><h1>Welcome to Responsive Web Design</h1></div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero">
+        <img src="Assets/code.jpg" alt="Imagen de programacion web">
+        <div class="hero-text">
+            <h2>Home</h2>
+            <p>This is the beginning of our Responsive Web Design page, where professional and optimized work is carried out to meet the client's requests. </p>
+        </div>
+
+
+        </section>        
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>We are a page that focuses on teaching new programmers a little bit of HTML and CSS in addition to doing various programming-related jobs.</p>
+            <p>Below are our services and a form you can fill out so we can get in touch with you.</p>
+        </section>
+        <section id="services" class="section services-section">
+            <h2>Our Services</h2>
+            <p>We offer web design and development services to create responsive and user-friendly websites.</p>
+        </section>
+        <section class="grid-container">
+            <div class="grid-item">Service 1</div>
+            <div class="grid-item">Service 2</div>
+            <div class="grid-item">Service 3</div>
+        </section>
+        <section id="contact" class="section contact-section">
+            <h2>Contact Us</h2>
+
+            <form action="https://formsubmit.co/ec3e6df4b0159f3396886581490f74c6" method="POST"></form>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="3" placeholder="Your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="email@example.com">
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9\s\-\+\(\)]{7,15}" placeholder="333 333 33 33">
+
+            <label for="message">Message</label>
+            <input id="message" id="message" name="message" rows="5" required placeholder="You can write here what you wanna let us know">
+
+            <button type="submit" class="boton">Send</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Responsive Web Design</p>
+    </footer>
+</body>
+</html>
