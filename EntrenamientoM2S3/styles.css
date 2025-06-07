@@ -1,0 +1,316 @@
+/* ============================
+   VARIABLES CSS (Custom Properties)
+   ============================
+   Se definen variables reutilizables con :root para mantener
+   colores y estilos consistentes a lo largo del sitio.
+   Permiten una fácil actualización del diseño desde un solo lugar.
+*/
+:root {
+  --color-fondo: #ffffff;              /* Fondo base del sitio */
+  --color-texto: #222222;              /* Color principal de texto */
+  --color-primario: #006eff;           /* Color de marca (azul) */
+  --color-secundario: #555555;         /* Color complementario para texto */
+  --color-primario-hover: #004bbd;     /* Color para enlaces al hacer hover */
+  --fuente-secundaria: 'Segoe UI', sans-serif; /* Fuente secundaria usada en títulos */
+  --transicion-corta: 0.3s ease;       /* Tiempo de transición para animaciones */
+}
+
+/* ============================
+   RESET GENERAL Y ESTILOS BASE
+   ============================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Asegura que el padding y el border no afecten el ancho total */
+}
+
+body {
+  font-family: Arial, sans-serif;       /* Fuente legible y universal */
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-texto);            /* Texto oscuro para contraste */
+  line-height: 1.5;                     /* Espaciado vertical legible */
+  min-height: 100vh;                    /* Asegura que el body ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;              /* Facilita estructura de layout vertical (header, main, footer) */
+}
+
+/* ============================
+   HEADER Y NAVEGACIÓN
+   ============================ */
+header {
+  background-color: #006effdd;         /* Azul con transparencia */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra sutil para profundidad */
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  user-select: none; /* Previene selección del texto del logo por error */
+}
+
+/* ===== Menú hamburguesa (versión móvil) ===== */
+.menu-toggle {
+  display: none; /* Checkbox oculto que controla la visibilidad del menú */
+}
+
+.hamburger {
+  display: none;  /* Se muestra solo en pantallas pequeñas */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: background-color var(--transicion-corta);
+}
+
+/* ===== Menú principal ===== */
+.menu {
+  display: flex;
+  gap: 1.5rem; /* Espaciado horizontal entre enlaces */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color var(--transicion-corta);
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: var(--color-primario-hover); /* Cambio de color al pasar el mouse */
+  outline: none;
+}
+
+/* ============================
+   CONTENIDO PRINCIPAL
+   ============================ */
+main {
+  flex-grow: 1;           /* Toma todo el espacio disponible entre header y footer */
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 3rem; /* Espacio entre secciones */
+}
+
+/* ============================
+   SECCIÓN HERO
+   ============================ */
+#hero {
+  position: relative;
+  text-align: center;
+}
+
+#hero img {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover; /* Mantiene proporciones sin deformar */
+}
+
+.hero-text {
+  margin-top: 1rem;
+}
+
+.hero-text h2 {
+  font-family: var(--fuente-secundaria);
+  font-size: 3rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--color-secundario);
+}
+
+/* ============================
+   SECCIÓN ABOUT
+   ============================ */
+#about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-secundario);
+}
+
+.about-section h2 {
+  font-family: var(--fuente-secundaria);
+  font-size: 3rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================
+   SECCIÓN SERVICIOS
+   ============================ */
+#services h2 {
+  font-size: 3rem;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.services-section p {
+  font-size: 1.2rem;
+  color: var(--color-secundario);
+  text-align: center;
+}
+
+/* ===== Tarjetas de servicios (grid) ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* ============================
+   FORMULARIO DE CONTACTO
+   ============================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical; /* Permite al usuario expandir verticalmente */
+  min-height: 100px;
+}
+
+button.boton {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color var(--transicion-corta);
+}
+
+button.boton:hover {
+  background-color: var(--color-primario-hover);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+
+/* Para tablets y móviles medianos */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: #006effdd;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .menu-toggle:checked ~ .menu {
+    display: flex; /* Muestra el menú si el checkbox está marcado */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+.grid-container {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+  }
+
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Para móviles pequeños */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid-item {
+    width: 90%;
+    max-width: none;
+  }
+}
