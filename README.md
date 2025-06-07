@@ -1,40 +1,32 @@
 # Responsive Web Design Example
 
-Este proyecto es un ejemplo sencillo de diseño web responsivo utilizando **HTML5** y **CSS3**, implementando:
+Este proyecto está contenido dentro de la carpeta **Entrenamiento M2S3**, que incluye:
 
-- Estructura semántica clara con etiquetas HTML5 (`<header>`, `<nav>`, `<section>`, `<footer>`, etc.)
-- Layout flexible con **Flexbox** para el header y navegación.
-- Diseño adaptable con **CSS Grid** para la sección de servicios.
-- Diseño responsive con **media queries** para dispositivos móviles y tablets.
-- Buenas prácticas en nombrado de clases, organización y comentarios en el código.
-- Formulario de contacto funcional con validaciones básicas.
+- `Entrenamiento M2S3/index.html`: Página principal con estructura semántica y contenido.
+- `Entrenamiento M2S3/styles.css`: Archivo CSS externo con estilos, variables CSS, Flexbox, Grid y media queries.
+- `Entrenamiento M2S3/Assets/`: Carpeta con imágenes y recursos usados en la página.
 
 ---
 
-## Archivos
+## Descripción
 
-- `index.html`: Página principal con estructura semántica y contenido.
-- `styles.css`: Archivo CSS externo con estilos, variables CSS, Flexbox, Grid y media queries.
+Proyecto de ejemplo para practicar diseño web responsivo utilizando **HTML5** y **CSS3** con buenas prácticas:
 
----
-
-## Características
-
-- Navegación responsive con menú hamburguesa para dispositivos pequeños.
-- Sección hero con imagen y texto destacado.
-- Sección About con descripción de la página.
-- Sección Services organizada con CSS Grid para adaptarse a diferentes tamaños de pantalla.
-- Formulario de contacto con campos obligatorios y validaciones HTML5.
-- Pie de página simple y accesible.
+- Estructura semántica clara.
+- Layout flexible con Flexbox para el header y navegación.
+- Diseño adaptable con CSS Grid en la sección de servicios.
+- Diseño responsive con media queries para dispositivos móviles y tablets.
+- Formulario de contacto con validaciones HTML5.
 
 ---
 
 ## Cómo usar
 
-1. Clona este repositorio o descarga los archivos.
-2. Abre `index.html` en tu navegador preferido.
-3. Para modificar estilos, edita `styles.css`.
-4. Para usar el formulario, envía la información a la URL configurada en el atributo `action` del formulario.
+1. Descarga o clona el repositorio.
+2. Navega a la carpeta `Entrenamiento M2S3`.
+3. Abre el archivo `index.html` en tu navegador.
+4. Los estilos están en `styles.css` dentro de la misma carpeta.
+5. Las imágenes y otros recursos están dentro de la carpeta `Assets`.
 
 ---
 
@@ -47,13 +39,14 @@ Este proyecto es un ejemplo sencillo de diseño web responsivo utilizando **HTML
 
 ## Mejoras futuras
 
-- Añadir validaciones personalizadas con JavaScript.
-- Agregar animaciones y transiciones más elaboradas.
-- Integrar un backend para procesar el formulario de contacto.
+- Validaciones personalizadas con JavaScript.
+- Animaciones y transiciones avanzadas.
+- Backend para procesamiento de formulario.
 
 ---
 
 ## Autor
 
-Alex D Walker
+[Alex D. Walker]
+
 
