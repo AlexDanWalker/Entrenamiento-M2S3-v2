@@ -1,74 +1,176 @@
 <!DOCTYPE html>
+<!-- Declaración del tipo de documento HTML5 -->
 <html lang="en">
+<!-- Etiqueta raíz con atributo de idioma para accesibilidad y SEO -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A responsive web design example with HTML, CSS, and a contact form.">
+  <meta charset="UTF-8" />
+  <!-- Definición de la codificación de caracteres para evitar problemas con acentos y símbolos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Hace que el diseño sea responsive ajustando la escala según el ancho del dispositivo -->
+  <meta name="description" content="A responsive web design example with HTML, CSS, and a contact form." />
+  <!-- Descripción para motores de búsqueda y mejora SEO -->
   <title>Responsive Web Design</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Vinculación al archivo CSS externo que contiene los estilos de la página -->
 </head>
 <body>
+  <!-- Contenedor principal visible del documento -->
+
   <header>
-    <nav class="navbar">
+    <!-- Cabecera del sitio, normalmente incluye navegación y logo -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <!-- Barra de navegación con clase para estilos y accesibilidad -->
+
       <div class="logo">
+        <!-- Contenedor del logo o título principal -->
         <h1>Welcome to Responsive Web Design</h1>
+        <!-- Título principal, importante para SEO y estructura semántica -->
       </div>
+
+      <!-- Checkbox oculto que controla la apertura/cierre del menú móvil -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+
+      <!-- Etiqueta asociada al checkbox que sirve como botón hamburguesa para móviles -->
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <!-- Los tres spans forman las barras del icono hamburguesa -->
         <span></span>
         <span></span>
         <span></span>
       </label>
+
       <ul class="menu">
+        <!-- Lista de navegación principal -->
         <li><a href="#hero">Home</a></li>
+        <!-- Enlaces internos que permiten navegación por secciones de la misma página -->
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section id="hero" class="section hero">
-      <img src="Assets/code.jpg" alt="Imagen de programación web">
+    <!-- Contenedor principal del contenido semántico -->
+
+    <section id="hero" class="section hero" tabindex="-1">
+      <!-- Sección destacada al inicio, identificada con id para enlace directo -->
+      <img src="Assets/code.jpg" alt="Imagen de programación web" />
+      <!-- Imagen descriptiva con atributo alt para accesibilidad -->
+
       <div class="hero-text">
+        <!-- Contenedor para texto destacado dentro del hero -->
         <h2>Home</h2>
-        <p>This is the beginning of our Responsive Web Design page, where professional and optimized work is carried out to meet the client's requests.</p>
+        <!-- Título de nivel 2, jerarquía debajo del h1 principal -->
+
+        <p>
+          This is the beginning of our Responsive Web Design page, where professional and optimized work is carried out to meet the
+          client's requests.
+        </p>
+        <!-- Párrafo introductorio que explica el propósito de la página -->
       </div>
     </section>
-    <section id="about" class="about-section">
+
+    <section id="about" class="about-section" tabindex="-1">
+      <!-- Sección sobre nosotros, con id para navegación interna -->
+
       <h2>About Us</h2>
-      <p>We are a page that focuses on teaching new programmers a little bit of HTML and CSS in addition to doing various programming-related jobs.</p>
+      <!-- Título para esta sección -->
+
+      <p>
+        We are a page that focuses on teaching new programmers a little bit of HTML and CSS in addition to doing various programming-related jobs.
+      </p>
+      <!-- Primer párrafo descriptivo -->
+
       <p>Below are our services and a form you can fill out so we can get in touch with you.</p>
+      <!-- Segundo párrafo que invita a continuar explorando la página -->
     </section>
-    <section id="services" class="section services-section">
+
+    <section id="services" class="section services-section" tabindex="-1">
+      <!-- Sección dedicada a servicios ofrecidos -->
+
       <h2>Our Services</h2>
+      <!-- Título de la sección -->
+
       <p>We offer web design and development services to create responsive and user-friendly websites.</p>
+      <!-- Descripción breve de los servicios -->
     </section>
+
     <section class="grid-container">
+      <!-- Contenedor con layout tipo grid/flex para mostrar elementos de servicios -->
+
       <div class="grid-item">Service 1</div>
+      <!-- Ítem individual de la cuadrícula -->
+
       <div class="grid-item">Service 2</div>
       <div class="grid-item">Service 3</div>
     </section>
-    <section id="contact" class="section contact-section">
+
+    <section id="contact" class="section contact-section" tabindex="-1">
+      <!-- Sección de contacto con formulario -->
+
       <h2>Contact Us</h2>
+      <!-- Título de la sección -->
+
       <form action="https://formsubmit.co/ec3e6df4b0159f3396886581490f74c6" method="POST">
+        <!-- Formulario que envía datos a un servicio externo para recibir mensajes -->
+
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required minlength="3" placeholder="Your name">
+        <!-- Etiqueta vinculada al campo nombre para accesibilidad -->
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="3"
+          placeholder="Your name"
+          aria-required="true"
+        />
+        <!-- Campo de texto para nombre con validación mínima -->
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="email@example.com">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="email@example.com"
+          aria-required="true"
+        />
+        <!-- Campo para correo electrónico con validación de formato -->
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9\s\-\+\(\)]{7,15}" placeholder="333 333 33 33">
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="[0-9\s\-\+\(\)]{7,15}"
+          placeholder="333 333 33 33"
+          aria-required="true"
+        />
+        <!-- Campo para teléfono con patrón de validación y placeholder de ejemplo -->
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required placeholder="You can write here what you wanna let us know"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="You can write here what you wanna let us know"
+          aria-required="true"
+        ></textarea>
+        <!-- Área de texto para mensajes, con tamaño definido y texto guía -->
 
         <button type="submit" class="boton">Send</button>
+        <!-- Botón para enviar el formulario -->
       </form>
     </section>
   </main>
+
   <footer>
+    <!-- Pie de página con derechos reservados -->
     <p>&copy; 2025 Responsive Web Design</p>
   </footer>
 </body>
